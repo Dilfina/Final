@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    	*{
+    margin: 0 auto;
+}
+
+body{
+    min-width: 1000px;
+    background-color: rgb(236, 241, 236);
+    font-family: 'Roboto Condensed', sans-serif;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+    padding: 1% 10%;
+    border-bottom: 4px solid black;
+}
+
+.pic{
+    background-image: url(https://www.ubackground.com/_ph/17/969573015.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    padding-top: 100px;
+    font-size: 50px;
+    letter-spacing: 25px;
+}
+
+.word{
+    margin-top: 60px;
+    font-size: 20px;
+    border: 3px double white;
+    width: fit-content;
+    padding: 20px 20px 5px 20px;
+    font-style: italic;
+}
+
+.bt{
+    margin: 50px auto 0 auto;
+    color:white;
+}
+
+#btn_white{
+    font-size: 25px;
+    color: white;
+    padding: 0 30px;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 200px;
+    font-size: 0;
+}
+
+#sol{
+    text-align: center;
+    margin: 70px 0 40px 0;
+    font-size: 40px;
+}
+
+.item{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.motiv{
+    background-color: grey;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+}
+
+.card-img-top{
+    height: 220px;
+    object-fit: cover;
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+.popup{
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 0;
+}
+
+.popup-content{
+    background-color: white;
+    height: 330px;
+    width: 500px;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+input{
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    padding: 8px;
+}
+
+.closed{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.user_profile{
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    margin: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+
+#profile_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+}
+
+#user_name{
+    margin: 0;
+    padding: 10px;
+    display: inline;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+            <div>MAIN</div>
+            <div>BLOG</div>
+            <div>CHALLANGE</div>
+            <div>"DEFFENDERS OF THE WORLD"</div>
+            <div>PETITION TO PROTECT NATURE</div>
+            <div>ABOUT US</div>
+    </div>
+
+    <div class="pic">
+        <div class="user_profile">
+            <img id="profile_img" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/21760012/original/d4c0c142f91f012c9a8a9c9aeef3bac28036f15b/create-your-cartoon-style-flat-avatar-or-icon.jpg" alt="">
+            <p id="user_name">John</p>
+        </div>
+        <h1>Protect our land</h1>
+        <div class="word">
+            <p>"Environment is no one's property to destroy;</p>
+            <p>it's everyone's responsibility to protect"</p>
+        </div>
+        <div class="bt">
+            <button onclick="popup()" id="btn_white" class="btn btn-outline-light btn-lg">JOIN</button>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="popup-content">
+            <img onclick="close_popup()" class="closed" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAV1BMVEX///8jHyAAAAAJAAALAAMNBAdoZmdiYGFmZGRta2sFAABpZ2hwbm8YExRbWFlhXl+dnJweGhsTDQ/T09O0s7M2MzNMSUqHhYbFxMWWlJQXEhNWVFRzcnIz5JTBAAAEQklEQVR4nO2d63aqMBCFBUVEpFatWtu+/3MeKeUUJbsEGEgya3+/XbMyzhWSDIsFIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIEeR026X59X0i6e/XLN3dThNJt+F0iZOPojjG57cJpL+d42NRfCTxxZmOr3ERVRzijbj0dXz4kV7Er+LSrXiNo19WL8LSX1YN6W5UPDUVjKJkLyp9nzxIj1046qWIplPxScGouAgKt+TJhKWKn2LCP5Nn4Q6MeGstQs6KzxYsZd+EZNuzK1qriJJURPSmrWD0sRMR3YfUoGGUSGRUgwXvgSjz5/UhM2kooeKLScGoyATW3I/r0bSQ8Y5qctE7x6vIqvvw3sqlIioCBaN4qt73D84H81pGdTcPnUyDw1ls3fa8ASOOsWIKFIziKVr7TtZoOcnQNhy5aLRai67cGnPWG27FFMqTbuvHL2lQLKIYlG7qe2Eszt8q9nfUDVTQmQVL2i1yvay+KuKolmvoB4EdtZ9rwSzq0kUrcP7rk27SJVJw/n60xR79+6vcWkYGFXQagzVYRdsqlvuZZH6Bjrq0iyGvXbQCJvqlTUbN/Vfwj2JtEYuZ7y5aAZN9Z+nHddB5mXhkPTAWcQzKv0UfCY7FvxwVlwmPYrBmSF2EMSi+SSACLhrIHpuQLFgCkwYoGrBMDHgymQmYNpamd4E7qKBnWbQJdLtVW0WsoKcuWgFTR8tR8y1S0L5hdwJM/9tHK+6QgktHL53swbHY3Fv5gr/yOAZr4KNQo/RDS/ubRZvA5f93wGBjsAbWuR9H/YIxGIQFS2DR+FYx6BisgUVjmy8ytN8RiotWwFg8ns37jqDv8RjoqGBPDrfn3gLTDVAwmCTzC+w7jQrOf9RCANiYtdkGFoM1sLC3FAzQRSssHTW0LNoEFvcHBYOMwZqs21FDtmBJp4r+Pw920eGoYbtoxRfqQ0u2ChS8OyrqRO9dalDNNgadD3NzlmsC1NtQfRyqz6Xq66FNTxN0LKrvS9U/W6h/PlT/jN/rPY1hf9F71L9rU/++dMg776Dqovp9C/V7T2vt+4fde8CwWw3DUdXv46s/iwELvZbzNLhMKDkTpf5cm10M1sBY9PdsIj5fao4tfATa04yq/oyw+nPe8MaFlrP6Q+9bYEf1LBbxRUsld2bU33tSf3dN/f3D8XdIPXdU9feAZe5ye9zd4KkK/ZaGJyo4LhqCMxWgJKczFaQsWOLlXAzZ2SYwZblzVPXzabBbyc8YctKG658TpX7Wl/55bWjm3tiI8Wfm3nrmuYnzvwrfzzz7cv6aaJp9OeH8UgezL00zaKWeAwyl38EMWv1zhPXPgm7N85Z9VH1yVCfzvPXPZH+cqy9frjyYq199G6GY+NsIhctvIyzK71tk+/WE37fI95nT71sQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQo5B8vlDCBniO5qwAAAABJRU5ErkJggg==" alt="" width="7%">
+            <img src="https://i.pinimg.com/236x/b6/9d/24/b69d24a5e3b50ce38022ec7c7ef41a77.jpg" alt="" width="15%">
+            <input id="username" type="text" name="username" placeholder="Username">
+            <input type="password" id="pass" name="pass" placeholder="Password">
+            <button onclick="login(username.value)" class="btn btn-outline-dark">Log In</button>
+        </div>
+    </div>
+
+    <h2 id="sol">SOLUTION</h2>
+
+    <div class="items">
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">PLANTS</h4>
+                  <h6 class="card-text">will save the planet</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://towmuch.com/upload/000/u2/16/60/fruits-and-berries-photo-big.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">FRUITS</h4>
+                  <h6 class="card-text">is the seed-bearing structure in flowering plants</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://ec.europa.eu/eurostat/documents/6921402/9104237/Shutterstock_Lisa_Kolbasa.png/f988f8b6-4138-4a91-9761-885bacab0ce2?t=1533725002972" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">SPORT</h4>
+                  <h6 class="card-text">includes all forms of competitive physical activity</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://www.dictionary.com/e/wp-content/uploads/2020/01/WisdomvsKnowledge_1000x700_jpg_OHVUvmTo.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">KNOWLEDGE</h4>
+                  <h6 class="card-text">is the best power</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    	function popup(){
+    var btn = document.getElementById("btn_white").innerHTML;
+    if(btn == "Log In"){
+        document.querySelector(".popup").style.display = "flex";
+        $(".popup").animate({opacity: "1"}, "slow");
+        document.body.style.overflow = "hidden";
+    }
+    else{
+        logout();
+    }
+}
+
+function close_popup(){
+    $(".popup").animate({opacity: "0"}, "slow");
+    document.querySelector(".popup").style.display = "none";
+    document.body.style.overflow = "scroll";
+    document.getElementById("username").value = "";
+    document.getElementById("pass").value = "";
+}
+
+function login(name){
+    document.querySelector(".user_profile").style.display = "inline";
+    document.getElementById("user_name").innerHTML = name;
+    document.getElementById("btn_white").innerHTML = "Log Out";
+    close_popup();
+}
+
+function logout(){
+    document.querySelector(".user_profile").style.display = "none";
+    document.getElementById("btn_white").innerHTML = "Log In";
+}</script>
+
+</body>
+</html>
