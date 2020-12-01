@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The best beauty salon</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/jquery.burn.js"></script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		 
+    <script src="js/jquery.burn.min.js"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+  <link href="css/styles.css" type="text/css" rel="Stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnMj8Xc5_jA0tqVHCoFHCk-2sHt4imItA&callback=initMap&libraries=&v=weekly"
+      defer></script>
+
+
+  
+
+  <style>
+  	html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+  	 #map {
+        height: 90%;
+      }
+
+  	.off{
+  		color:white;
+  		font-size:1.5rem;
+  	}
+  	.credit{
+  		text-align:center;
+
+  	}
+  	footer{
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+
+.main_content{
+  display: flex;
+}
+.main_content .cup{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.cup h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.cup .contentd{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.cup .contentd:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.cup .contentd:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+
+.left .contentd p{
+  text-align: justify;
+  font-size:1.5rem;
+  color:white;
+}
+.left .contentd .social{
+  margin: 20px 0 0 0;
+}
+.left .contentd .social a{
+  padding: 0 2px;
+}
+.left .contentd .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .contentd .social a span:hover{
+  background: #f12020;
+}
+.center .contentd .fas{
+  font-size: 1.7rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .contentd .fas:hover{
+  background: #f12020;
+}
+.center .contentd .textd{
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color:white;
+}
+.center .contentd .phone{
+  margin: 15px 0;
+}
+.right form .textd{
+  font-size: 1.7rem;
+  margin-bottom: 2px;
+  color: white;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form #msgForm{
+  width: 100%;
+  font-size: 1.7rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form #msgForm:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btnd{
+  margin-top: 10px;
+}
+.right form .btnd button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btnd button:hover{
+  background: #000;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 1.3rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main_content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main_content .cup{
+    margin: 5px 0;
+  }
+}
+
+  	.statics{
+  		background: url("https://media.istockphoto.com/photos/makeup-artist-applying-eyeshadow-on-a-girl-picture-id687244776?k=6&m=687244776&s=612x612&w=0&h=EzX__n-kuSjIFmEYLThI_J5RHvkR5T6MJIxJ0P1ZS4A=") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  	}
+  	.wrapper{
+  padding: 20px 50px;
+}
+.wrapper .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.wrapper p{
+  text-align: justify;
+  padding-bottom: 20px;
+}
+.counter-up{
+  background: url("images/bg-2.jpeg") no-repeat;
+  min-height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.counter-up::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+}
+.counter-up .content{
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter-up .content .box{
+  border: 1px dashed rgba(255,255,255,0.6);
+  width: calc(25% - 30px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+.content .box .icon{
+  font-size: 48px;
+  color: #e6e6e6;
+}
+.content .box .counter{
+  font-size: 50px;
+  font-weight: 500;
+  color: #f2f2f2;
+  font-family: sans-serif;
+}
+.content .box .text{
+  font-weight: 400;
+  color: #ccc;
+}
+@media screen and (max-width: 1036px) {
+  .counter-up{
+    padding: 50px 50px 0 50px;
+  }
+  .counter-up .content .box{
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .counter-up .content .box{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper{
+    padding: 20px;
+  }
+  .counter-up{
+    padding: 30px 20px 0 20px;
+  }
+}
+
+  	   .swiper-container {
+      width: 100%;
+      margin-top:-50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 380px;
+      background:#fff;
+
+    }
+    .imb{
+    	width:100%;
+    	height:300px;
+    	overflow:hidden;
+    }
+    .imb img{
+    	width:100%;
+    	height:300px;
+    }
+    .det{
+    	background:peachpuff;
+ 
+    	box-sizing:border-box;
+    	font-size:20px;
+    	padding:20px;
+    }
+    .det h3{
+    	background:black;
+    	margin:0;
+    	padding:0;
+    	font-size:20px;
+    	text-align:center;
+    	line-height:20px;
+    	font-family: Arial, Helvetica, sans-serif;
+    	color:lightpink;
+    }
+    .det h3 span{
+    	
+    	font-size:16px;
+    	color:palevioletred;
+
+    }
+    .bidi{
+  		position:relative;
+  		font-family:consolas;
+  		display:inline-block;
+  		padding:15px 30px;
+  		color:black;
+  		text-transform:uppercase;
+  		letter-spacing: 1px;
+  		
+  		font-size:14px;
+  		font-weight:2px;
+  		overflow:hidden;
+  		transition:0.2s;
+  	}
+  	.bidi:hover{
+  		color:#255784;
+  		background:#2196f3;
+  		box-shadow:0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  		transition-delay:1s;
+
+  	}
+  	.bidi span{
+  		position:absolute;
+  		display:block;
+
+  	}
+  	.bidi span:nth-child(1){
+  		top:0;
+  		left:-100%;
+  		width:100%;
+  		height:2%;
+  		background:linear-gradient(90deg, transparent,#2196f3);
+  	}
+  	.bidi:hover  span:nth-child(1){
+  		left:100%;
+  		transition:1s;
+
+  	}
+  	.bidi span:nth-child(2){
+  		top:-100%;
+  		right:0;
+  		width:2%;
+  		height:100%;
+  		background:linear-gradient(180deg, transparent,#2196f3);
+  	}
+  	.bidi:hover  span:nth-child(2){
+  		top:100%;
+  		transition:1s;
+  		transition-delay:0.25s;
+  		
+  	}
+  	.bidi span:nth-child(3){
+  		bottom:0;
+  		right:-100%;
+  		width:100%;
+  		height:2%;
+  		background:linear-gradient(270deg, transparent,#2196f3);
+  	}
+  	a:hover  span:nth-child(3){
+  		right:100%;
+  		transition:1s;
+  		transition-delay:0.5s;	
+  	}
+  	a span:nth-child(4){
+  		bottom:-100%;
+  		left:0;
+  		width:2%;
+  		height:100%;
+  		background:linear-gradient(360deg, transparent,#2196f3);
+  	}
+  	a:hover  span:nth-child(4){
+  		bottom:100%;
+  		transition:1s;
+  		transition-delay:0.25s;
+  		
+  	}
+  </style>
+</head>
+<body>
+           <nav class="navbar">
+        <h1 class="brand"><a href="Dilf.html" style="text-decoration: none; color:hotpink">DIL<span>FI</span>NA</a></h1>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+		<div id="hero-slider">
+      <div class="hero-slide-item" style="background-image:url('https://i.pinimg.com/originals/1f/07/30/1f0730df29a4bf396412755530ab4e4c.jpg'); width:100%;">
+        <div class="hero-slider-marketing">
+          <a href="https://youtu.be/yjDIBl8Om0c" class="youtube-button"><span class="fa fa-play"></span></a>
+          <h2>We are waiting for you...</h2>
+          <button type="button" class="btn btn-primary btn-lg">Explore</button>
+        </div>
+      </div>
+
+      <div class="hero-slide-item" style="background-image:url('d2.jpg'); width:100%;">
+        <div class="hero-slider-marketing">
+          
+        </div>
+      </div>
+
+      <div class="hero-slide-item" style="background-image:url('d9.jpg'); width:100%;">
+        <div class="hero-slider-marketing">
+        
+        </div>
+      </div>
+
+      <div class="hero-slide-item" style="background-image:url('d3.jpg'); width:100%;">
+        <div class="hero-slider-marketing">   
+        </div>
+      </div>
+    </div>
+	
+	
+	<section class="c1" id="services">
+		<h2>Services</h2>
+		<h1>What We Do...</h1>
+		<img class="lo" src="a.png" alt="jj">
+		<div class="card">
+		<div class="box">
+			<div class="imgBx">
+			<img src="https://womanel.com/wp-content/uploads/2019/08/1-3.jpeg">
+		</div>
+		<div class="content">
+			<a class="bidi" href="#" style="text-decoration: none;">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		Lympha-lifting<br>
+  		$1000
+  	</a>
+		</div>
+	</div>
+	<div class="box">
+			<div class="imgBx">
+			<img src="https://static.tildacdn.com/tild6133-6630-4961-a562-336664656530/1996184-2.jpg">
+		</div>
+		<div class="content">
+			<a class="bidi" href="#" style="text-decoration: none;">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		Rinoplastica<br>
+  		$5000
+  	</a>
+		</div>
+	</div>
+	<div class="box">
+			<div class="imgBx">
+			<img src="https://incatalog.kz/uploads/brovi.jpg">
+		</div>
+		<div class="content">
+			<a class="bidi" href="#" style="text-decoration: none;">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		Microblading<br>
+  		$3000
+
+  	</a>
+			</div>
+	</div>
+	<div class="box">
+			<div class="imgBx">
+			<img src="https://i.pinimg.com/originals/10/a8/c5/10a8c5de48bad7e0b5af60ad462ad211.jpg">
+		</div>
+		<div class="content">
+			<a class="bidi" href="#" style="text-decoration: none;">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		Botox lips<br>
+  		$4500
+
+  	</a>
+		</div>
+	</div>
+	<div class="box">
+			<div class="imgBx">
+			<img src="https://m.1obl.ru/upload/resize_cache/iblock/2cc/827_465_2/2ccbbdc3879c47b5b0b6ed666cf21e72.jpg">
+		</div>
+		<div class="content">
+			<a class="bidi" href="#" style="text-decoration: none;">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		Smas-lifting<br>
+  		$2000
+
+  	</a>
+		</div>
+	</div>
+	<div class="box">
+			<div class="imgBx">
+			<img src="https://images.squarespace-cdn.com/content/v1/5aeac3d9365f02e0414daf30/1541151903335-BQ0MXAXGK9R93NIH5Z26/ke17ZwdGBToddI8pDm48kH1vg9BvbTBp8nFYZ86U6C1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PImrSLG7UC-nMKNzTLqk3B61MTNTcPjx_3MhYuH29EpMoKMshLAGzx4R3EDFOm1kBS/%D1%83%D1%85%D0%BE%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F">
+		</div>
+		<div class="content">
+			<a class="bidi" href="#" style="text-decoration: none;">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  		Reflexology<br>
+  		$2000
+  	</a>
+		</div>
+	</div>
+</div>
+	</section>
+	
+    <div id="about">
+	<h2 class="burning">Team</h2>
+	<h1 class="burning">Our team</h1>
+	<img class="lo" src="a.png" alt="kk">
+
+	
+   <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://i.pinimg.com/originals/cd/04/5e/cd045e61fc8a460b3383067cbce112b0.jpg">
+      </div>
+      <div class="det">
+      	<h3>Dilfina K.Ilyas<br><span>Founder</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://i.pinimg.com/originals/17/8c/5f/178c5fb685aa7a86061d6465bb22b3dc.jpg">
+      </div>
+      <div class="det">
+      	<h3>Madina K.Ilyas<br><span>CEO</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://i.pinimg.com/originals/91/93/40/91934063668665208d653fc4d49c9a42.jpg">
+      </div>
+      <div class="det">
+      	<h3>Goar Avetisyan<br><span>Expert</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://yt3.ggpht.com/a/AATXAJyhrJATrbO_AGEL4pHJ_UW325TMuogwOMdrg75FJ-k=s900-c-k-c0x00ffffff-no-rj">
+      </div>
+      <div class="det">
+      	<h3>Lisa Eldridge<br><span>Expert</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://yt3.ggpht.com/a/AATXAJzdSqlc5_tJf_Hbua7Mffkx92qwwNZzbytDCBPp=s900-c-k-c0x00ffffff-no-rj">
+      </div>
+      <div class="det">
+      	<h3>Gucci Westman<br><span>Expert</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://lubiteliyablok.com/wp-content/uploads/2017/10/16906960_1834856453455074_4675444039137361920_n.jpg">
+      </div>
+      <div class="det">
+      	<h3>Val Garland<br><span>Expert</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://pp.vk.me/c624323/v624323378/d663/aY3SImhOpTo.jpg">
+      </div>
+      <div class="det">
+      	<h3>Boyce Bonelli<br><span>Expert</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="imb">
+      	<img src="https://i.pinimg.com/736x/e7/a9/17/e7a9171c147c88f09cf3be3354bc3f01.jpg">
+      </div>
+      <div class="det">
+      	<h3>Aaron de Mey<br><span>Expert</span></h3>
+      </div>
+    </div>
+</div>
+</div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+<section class="Our achievments">
+  <div class="statics"></div>
+  	<div class="wrapper">
+    
+  <div class="counter-up">
+    <div class="content">
+      <div class="box">
+        <div class="icon"><i class="fas fa-history"></i></div>
+        <div class="counter">724</div>
+        <div class="text">Working Hours</div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fas fa-gift"></i></div>
+        <div class="counter">1008</div>
+        <div class="text">Clients Per Day</div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <div class="counter">300000</div>
+        <div class="text">Happy Clients</div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fas fa-award"></i></div>
+        <div class="counter">120</div>
+        <div class="text">Awards Received</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div id="contact">
+<footer>
+      <div class="main_content">
+        <div class="left cup">
+          <h2 class="off">
+About us</h2>
+<div class="contentd">
+             <div class="place">
+              <span class="fas fa-map-marker-alt" style="margin-top:10px"></span>
+              <span class="textd" style="color:white; margin-left:10px; margin-top:40px;">Turkey, Istanbul</span>
+            </div>
+<div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="textd" style="color:white; margin-left:10px">+089-765432100</span>
+            </div>
+<div class="emaild">
+              <span class="fas fa-envelope"></span>
+              <span class="textd" style="color:white; margin-left:10px">dilfina@gmail.com</span>
+            </div>
+<div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="https://instagram.com/letswme_e"><span class="fab fa-instagram"></span></a>
+              <a href="https://youtu.be/qoGGQ9bgoJ8l"><span class="fab fa-youtube"></span></a>
+            </div>
+</div>
+</div>
+<div class="center cup">
+          <h2 class="off">
+Address</h2>
+<div class="contentd">
+            
+</div>
+<div id="map"></div>
+</div>
+
+<div class="right cup">
+          <h2 class="off">
+Contact Us</h2>
+<div class="contentd">
+            <form action="#">
+              <div class="emaild">
+                <div class="textd">
+Email *</div>
+<input type="email" required>
+              </div>
+<div class="msg">
+                <div class="textd">
+Message *</div>
+
+<textarea id="msgForm" rows="2" cols="25" required></textarea> 
+              <br />
+<div class="btnd">
+<button type="submit">Send</button>
+              </div>
+<div class="bottom">
+<center>
+          <span class="credit">Created By <a href="https:ddd">Dilfina</a> | </span>
+          <span class="far fa-copyright"></span> 2020 All rights reserved.
+        </center>
+    </footer>
+</div>
+
+
+
+	<script>
+
+		const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+});
+		$(document).ready(function(){
+    $('.counter').counterUp({
+      delay: 10,
+      time: 1200
+    });
+  });
+
+		
+		var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 500,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+		$(document).ready(function() {
+    $('.burning').burn();
+});
+		$('#hero-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        fade: true,
+        speed: 1000,
+        cssEase: 'linear'
+      });
+		function big(element){
+		element.style.fontSize="20px";
+	}
+	function small(element){
+		element.style.fontSize="15px"
+	}
+	function close_popup(){
+    $(".forms").animate({opacity: "0"}, "slow");
+    document.querySelector(".forms").style.display = "none";
+    document.body.style.overflow = "scroll";
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+}
+function popup(){
+    var btn = document.getElementById("contact").innerHTML;
+        document.querySelector(".forms").style.display = "flex";
+        $(".forms").animate({opacity: "1"}, "slow");
+        document.body.style.overflow = "hidden";
+       
+}
+let sendButton = document.getElementById('send');
+    let form = document.getElementById('forms');
+
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+    })
+
+    
+        function ls () {
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let message = document.getElementById('message');
+
+        name = name.value;
+        localStorage.setItem('name', name);
+
+        email = email.value;
+        localStorage.setItem('email', email);
+
+        message = message.value;
+        localStorage.setItem('message', message);
+        window.alert("Dear " +name+" your message is accepted");
+
+}
+function toggleMenu(){
+    	var menuToggle=document.querySelector('.toggle');
+    	var menu=document.querySelector('.menu');
+    	menuToggle.classList.toggle('active');
+    	menu.classList.toggle('active');
+
+    }
+
+
+	</script>
+	<script>
+
+var map;
+            var InforObj = [];
+            var centerCords = {
+                lat: 41.0082,
+                lng: 28.9784
+            };
+            var markersOnMap = [{
+                    placeName: "Misis Beauty Salon in Istanbul",
+                    LatLng: [{
+                        lat: 41.0332358201907,
+                        lng:  28.976600055028687
+                    }]
+                },
+                {
+                    placeName: "Sun Love Beauty & Solariums",
+                    LatLng: [{
+                        lat: 41.01183545504919,
+                        lng: 28.64317619735622
+                    }]
+                },
+                {
+                    placeName: "Beauty Salon Solarium",
+                    LatLng: [{
+                        lat: 41.03323582019076, 
+                        lng: 28.976600055028687
+                    }]
+                },
+                {
+                    placeName: "SALON DILFINA",
+                    LatLng: [{
+                        lat: 41.00803739904259, 
+                        lng: 28.623767755027732
+                    }]
+                },
+                {
+                    placeName: "Makeup World Hilal Elaldı",
+                    LatLng: [{
+                        lat: 41.02209248347098, 
+                        lng: 28.67920741344116
+                    }]
+                }
+            ];
+
+            window.onload = function () {
+                initMap();
+            };
+            var icon = {
+    url: "https://seeklogo.com/images/S/salon-logo-F0E41E42DD-seeklogo.com.png", // url
+    scaledSize: new google.maps.Size(30, 30), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+
+            function addMarkerInfo() {
+                for (var i = 0; i < markersOnMap.length; i++) {
+                    var contentString = '<div id="content"><h1>' + markersOnMap[i].placeName +
+                        '</h1><p>Peaceful atmosphere, safe, and technological equipment, experienced and friendly team of cosmetic and beauty industry, on the Avenue of the Istanbul-Baghdad service.</p></div>';
+
+                    const marker = new google.maps.Marker({
+                        position: markersOnMap[i].LatLng[0],
+                        map: map,
+                        icon:icon
+                    });
+
+                    const infowindow = new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 200
+                    });
+
+                    marker.addListener('click', function () {
+                        closeOtherInfo();
+                        infowindow.open(marker.get('map'), marker);
+                        InforObj[0] = infowindow;
+                    });
+                    
+                }
+            }
+
+            function closeOtherInfo() {
+                if (InforObj.length > 0) {
+                    InforObj[0].set("marker", null);
+                    InforObj[0].close();
+                    InforObj.length = 0;
+                }
+            }
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 8,
+                    center: centerCords,
+                    mapTypeId: "terrain"
+                });
+
+               const flightPlanCoordinates = [
+          { lat: 41.0332358201907,  lng:  28.976600055028687 },
+          { lat: 41.01183545504919, lng: 28.64317619735622},
+          { lat: 41.03323582019076, 
+                        lng: 28.976600055028687 },
+           {lat: 41.00803739904259, 
+                        lng: 28.623767755027732},             
+          { lat: 41.02209248347098, 
+                        lng: 28.67920741344116 },
+        ];
+        const flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: "#FF0000",
+          strokeOpacity: 1.0,
+          strokeWeight: 2,
+        });
+        flightPath.setMap(map);
+
+        addMarkerInfo();
+            
+      }
+                
+            
+
+
+
+    
+      
+  </script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/jquery.burn.js"></script>
+
+</body>
